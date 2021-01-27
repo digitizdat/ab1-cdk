@@ -6,20 +6,24 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="ab1_cdk",
-    version="0.0.1",
+    name="Create_VPC_ALB_ASG",
+    version="1.0.0",
 
-    description="An empty CDK Python app",
+    description="Create new VPC and ALB/AutoscalingGroup in it",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    author="author",
+    author="Huang, Zhuobin (James)",
 
-    package_dir={"": "ab1_cdk"},
-    packages=setuptools.find_packages(where="ab1_cdk"),
+    package_dir={"": "cdk_vpc_ec2"},
+    packages=setuptools.find_packages(where="cdk_vpc_ec2"),
 
     install_requires=[
-        "aws-cdk.core==1.86.0",
+        "aws-cdk.core",
+        "aws-cdk.aws-ec2",
+        "aws-cdk.aws-elasticloadbalancingv2",
+        "aws-cdk.aws-autoscaling",
+        "aws-cdk.aws-rds"
     ],
 
     python_requires=">=3.6",
