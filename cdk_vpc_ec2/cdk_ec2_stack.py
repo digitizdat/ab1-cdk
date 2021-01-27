@@ -6,7 +6,7 @@ import aws_cdk.aws_certificatemanager as acm
 import aws_cdk.aws_route53 as r53
 
 ec2_type = "t2.micro"
-key_name = "id_rsa"  # Setup key_name for EC2 instance login
+key_name = "member"  # Setup key_name for EC2 instance login
 linux_ami = ec2.AmazonLinuxImage(
     generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX,
     edition=ec2.AmazonLinuxEdition.STANDARD,
