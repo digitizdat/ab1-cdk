@@ -1,1 +1,4 @@
 -e .
+cdk-ec2-key-pair
+aws-cdk.aws-waf
+aws-cdk.aws-iam

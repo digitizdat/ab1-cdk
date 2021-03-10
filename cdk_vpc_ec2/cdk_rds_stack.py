@@ -18,8 +18,8 @@ class CdkRdsStack(core.Stack):
         # Secrets Manager auto generate and keep the password, don't put password in cdk code directly
         db_Aurora_cluster = rds.DatabaseCluster(
             self,
-            "MyAurora",
-            default_database_name="MyAurora",
+            "MOStateAppDB",
+            default_database_name="MOStateAppDB",
             engine=rds.DatabaseClusterEngine.aurora_mysql(
                 version=rds.AuroraMysqlEngineVersion.VER_5_7_12
             ),
@@ -32,7 +32,7 @@ class CdkRdsStack(core.Stack):
                     instance_type_identifier="t2.small"
                 ),
             ),
-            instances=3,
+            instances=2,
             parameter_group=rds.ParameterGroup.from_parameter_group_name(
                 self,
                 "para-group-aurora",
